@@ -29,3 +29,8 @@ export type Page1Props = {
 export type Page2Props = {
 
 }
+export interface authContextProps  {
+    user: Boolean;
+    login: Function;
+    logout: Function;
+}
