@@ -1,13 +1,12 @@
 import  React,{ useContext, useState,ReactNode } from "react";
 import { authContextProps } from 'lib/types/common';
 
-const authContextDefaultValues: authContextProps = {
-    user: null,
+
+const AuthContext = React.createContext<authContextProps>({
+    user: false,
     login: () => {},
     logout: () => {},
-};
-
-const AuthContext = React.createContext<authContextProps>(authContextDefaultValues);
+});
 
 export function useAuth() {
     return useContext(AuthContext);
@@ -17,7 +16,7 @@ type Props = {
 };
 
 export function AuthProvider({ children }: Props) {
-    const [user, setUser] = useState<boolean>(null);
+    const [user, setUser] = useState<boolean>(false);
 
     const login = () => {
         setUser(true);
