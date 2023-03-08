@@ -21,11 +21,13 @@ const Sidebar: FC<SidebarProps> = (props) => {
     ]
     return (
         <aside className={styles.wrapper}>
-            <ul className={styles.wrapper__navigation}>
-                {links.map((e, i) => {
-                    return <li key={i} className={styles.wrapper__navigation__link} onClick={() => { setSelectedID(e.id) }}> {e.label}</li>
-                })}
-            </ul>
+            <nav>
+                <ul className={styles.wrapper__navigation}>
+                    {links.map((e, i) => {
+                        return <li key={i} className={styles.wrapper__navigation__link} onClick={() => { setSelectedID(e.id) }}> {e.label}</li>
+                    })}
+                </ul>
+            </nav>
         </aside >
     )
 }

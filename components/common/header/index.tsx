@@ -11,11 +11,11 @@ const Header: FC<HeaderProps> = ({ }) => {
 
     console.log(appState)
     return (
-        <div className={styles.wrapper}>
+        <header className={styles.wrapper}>
             <div className={styles.wrapper__columns__logo}>LOGO</div>
-            <div className={styles.wrapper__columns__navigation}>Navigation</div>
+            <nav className={styles.wrapper__columns__navigation}>Navigation</nav>
             <div className={styles.wrapper__columns__search}>search</div>
-        </div >
+        </header >
     )
 }
 export default Header;
