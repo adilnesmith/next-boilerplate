@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ProfileProps } from 'lib/types/common'
+import { ProfileProps } from 'lib/@types/common'
 import { useRouter } from "next/router";
 const Profile: FC<ProfileProps> = () => {
     const router = useRouter();

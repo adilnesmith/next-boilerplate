@@ -1,5 +1,5 @@
 import  React,{ useContext, useState,ReactNode } from "react";
-import { authContextProps } from 'lib/types/common';
+import { authContextProps } from 'lib/@types/common';
 
 
 const AuthContext = React.createContext<authContextProps>({

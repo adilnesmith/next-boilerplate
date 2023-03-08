@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { MainBodyProps } from 'lib/types/common'
+import { MainBodyProps } from 'lib/@types/common'
 import Sidebar from './sidebar/index'
 import styles from './MainBody.module.scss'
 import DetailPanel from './detail-panel'

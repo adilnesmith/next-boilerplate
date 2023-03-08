@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from 'react'
-import { Page1Props } from 'lib/types/common'
+import { Page1Props } from 'lib/@types/common'
 import styles from './Page1.module.scss'
 const arr = [
     "apple", "banana", "mango", "apple"

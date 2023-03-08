@@ -1,19 +1,20 @@
 import { FC } from 'react';
-import { DetailPanelProps } from 'lib/types/common'
+import { DetailPanelProps } from 'lib/@types/common'
 import HomePanel from './home/'
 import ProfilePanel from './profile'
 import Page1 from './Page1';
 import Page2 from './Page2'
-
+import {HOME_PAGE,PAGE_1,PAGE_2,PROFILE} from 'lib/constants'
 
 const DetailPanel: FC<DetailPanelProps> = (selectedId) => {
+    console.log(selectedId)
 
     return (
         <>
-            {selectedId.selectedId == 1 && <HomePanel />}
-            {selectedId.selectedId == 2 && <ProfilePanel />}
-            {selectedId.selectedId == 3 && <Page1 />}
-            {selectedId.selectedId == 4 && <Page2 />}
+            {selectedId.selectedId == HOME_PAGE && <HomePanel />}
+            {selectedId.selectedId == PROFILE  && <ProfilePanel />}
+            {selectedId.selectedId == PAGE_1&& <Page1 />}
+            {selectedId.selectedId == PAGE_2 && <Page2 />}
         </>
     )
 

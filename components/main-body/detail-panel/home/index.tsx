@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { HomeProps } from 'lib/types/common'
+import { HomeProps } from 'lib/@types/common'
 const Home: FC<HomeProps> = () => {
     let num = 1;
     function getPositions(x: number, y: number) {

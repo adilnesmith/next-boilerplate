@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { SidebarProps } from 'lib/types/common'
+import { SidebarProps } from 'lib/@types/common'
 import styles from './Sidebar.module.scss'
 
 const Sidebar: FC<SidebarProps> = (props) => {

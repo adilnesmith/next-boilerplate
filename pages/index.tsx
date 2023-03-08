@@ -4,13 +4,14 @@ import styles from '../styles/Home.module.css'
 import Header from 'components/common/header'
 import MainBody from 'components/main-body'
 import Footer from 'components/common/footer'
+import {APP_TITLE,APP_DESCRIPTION} from 'lib/constants'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Next.js boilerplate</title>
-        <meta name="description" content="The Next.js boilerplate for personal use" />
+        <title>{APP_TITLE}</title>
+        <meta name="description" content={APP_DESCRIPTION}/>
         <meta name="author" content="Adil Peter" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

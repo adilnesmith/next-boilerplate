@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Page2Props } from 'lib/types/common';
+import { Page2Props } from 'lib/@types/common';
 import { useAuth } from "lib/context/AuthContext";
 
 const Page2: FC<Page2Props> = () => {
