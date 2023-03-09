@@ -4,11 +4,11 @@ import { useAppSelector, useAppDispatch } from 'lib/hooks/selectors';
 import {
   decrement,
   increment,
-  selectCount,
-} from './reducer';
+  getCount,
+} from '../reducers/counter';
 
 export function Counter() {
-  const count = useAppSelector(selectCount);
+  const count = useAppSelector(getCount);
   const dispatch = useAppDispatch();
 
   return (

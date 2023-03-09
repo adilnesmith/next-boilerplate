@@ -1,9 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from 'pages/counter/reducer';
-
+import textReducer from 'pages/reducers';
+import counterReducer from 'pages/reducers';
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    text: textReducer
   },
 });
 
