@@ -5,7 +5,6 @@ import Header from 'components/common/header'
 import MainBody from 'components/main-body'
 import Footer from 'components/common/footer'
 import { APP_TITLE, APP_DESCRIPTION, APP_AUTHOR } from 'lib/constants'
-import { Counter } from 'pages/counter';
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +15,6 @@ const Home: NextPage = () => {
         <meta name="author" content={APP_AUTHOR} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Counter />
       <Header />
       <MainBody />
       <Footer />
