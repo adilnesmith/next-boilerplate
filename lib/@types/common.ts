@@ -29,8 +29,28 @@ export type Page1Props = {
 export type Page2Props = {
 
 }
-export interface authContextProps  {
+export interface authContextProps {
     user: Boolean;
     login: Function;
     logout: Function;
+}
+export interface UseAxiosState<T> {
+    data: T | null;
+    error: Error | null;
+    isLoading: boolean;
+}
+export interface Post {
+    id: number;
+    title: string;
+    content: string;
+}
+
+export interface PaginationData {
+    items: Post[];
+    loading: boolean;
+    error: string | null;
+    handlePrev: () => void;
+    handleNext: () => void;
+    currentPage: number;
+    totalPages: number;
 }

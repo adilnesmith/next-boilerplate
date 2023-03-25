@@ -1,27 +1,43 @@
-import { FC, useEffect } from 'react';
-import { ProfileProps } from 'lib/@types/common'
+import usePagination from "lib/hooks/usePagination";
 import { useRouter } from "next/router";
-import { ENDPOINTS, HEADERS } from 'lib/api'
-import { API_DOMAIN } from 'lib/general-config'
-import axios from 'axios'
-const Profile: FC<ProfileProps> = () => {
-    const getEntries = async () => {
-        const response = await axios.get(
-            API_DOMAIN + ENDPOINTS.GET.entries, {
-            headers: {
-                ...HEADERS.JSON
-            }
-        })
-    }
-    useEffect(() => {
-        getEntries()
-    }, [])
+function Profile() {
+    const {
+        items,
+        loading,
+        error,
+        handlePrev,
+        handleNext,
+        currentPage,
+        totalPages,
+    } = usePagination();
 
+    if (loading) {
+
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
     const router = useRouter();
     return (
-        <div onClick={() => {
-            router.push(`/url`);
-        }}>Profile Panel</div>
-    )
+        <>
+            <div onClick={() => {
+                router.push(`/category`);
+            }}>Profile Panel</div>
+            <div>
+                {items.map((item, i) => (
+                    <div key={i}>
+                        <p>{item.API}</p>
+                    </div>
+                ))}
+                <button onClick={handlePrev}>Previous</button>
+                <button onClick={handleNext} disabled={currentPage >= totalPages}>
+                    Next
+                </button>
+            </div>
+        </>
+    );
 }
+
 export default Profile;
