@@ -10,16 +10,9 @@ function Profile() {
         currentPage,
         totalPages,
     } = usePagination();
-
-    if (loading) {
-
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
     const router = useRouter();
+    if (loading) { return <div>Loading...</div> }
+    if (error) { return <div>Error: {error}</div> }
     return (
         <>
             <div onClick={() => {
