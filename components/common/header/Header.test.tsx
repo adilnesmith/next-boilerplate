@@ -6,6 +6,7 @@ describe('LOGO', () => {
     const image = screen.getByTestId('logo') as HTMLImageElement;
     it('renders the logo', () => {
         expect(image).toBeInTheDocument();
+        expect(image).toBeVisible();
     });
     it('renders the logo with a valid URL', () => {
         const urlRegex = /^http(s)?:\/\/.+$/;
@@ -24,6 +25,7 @@ describe('NAVIGATION', () => {
     it('renders the navigation', () => {
         const { getByTestId } = render(<Header />);
         expect(getByTestId('navigation')).toBeInTheDocument();
+        expect(getByTestId('navigation')).toContainHTML('nav')
     });
     it('renders the navigation with text', () => {
         const { getByTestId } = render(<Header />);
