@@ -5,17 +5,25 @@ import { SIDE_BAR } from 'lib/general-config'
 
 const Sidebar: FC<SidebarProps> = (props) => {
     const { setSelectedID } = props
-
     return (
-        <aside className={styles.wrapper}>
+        <aside data-testid="aside" className={styles.wrapper}>
             <nav>
                 <ul className={styles.wrapper__navigation}>
                     {SIDE_BAR?.LINKS?.map((e, i) => {
-                        return <li key={i} className={styles.wrapper__navigation__link} onClick={() => { setSelectedID(e.id) }}> {e.label}</li>
+                        return (
+                            <li
+                                data-testid={`aside-link-${e.id}`}
+                                key={`aside-link-${e.id}`}
+                                className={styles.wrapper__navigation__link}
+                                onClick={() => { setSelectedID(e.id) }}
+                            >
+                                {e.label}
+                            </li>
+                        )
                     })}
                 </ul>
             </nav>
-        </aside >
+        </aside>
     )
 }
 
