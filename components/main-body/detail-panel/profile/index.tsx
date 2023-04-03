@@ -15,7 +15,7 @@ function Profile() {
     if (error) { return <div>Error: {error}</div> }
     return (
         <>
-            <div onClick={() => {
+            <div data-testid="profile" onClick={() => {
                 router.push(`/category`);
             }}>Profile Panel</div>
             <div>

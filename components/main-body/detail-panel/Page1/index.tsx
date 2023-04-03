@@ -14,9 +14,8 @@ const Page1: FC<Page1Props> = () => {
             setFound("No results found")
         }
     }, [text])
-    console.log(found)
     return (
-        <div className={styles.wrapper}>
+        <div data-testid="page1" className={styles.wrapper}>
             <input className={styles['wrapper__search-box']} type="text" placeholder="search here ..." onChange={(e) => { setText(e.target.value) }} />
             <div className={styles.wrapper__container}>{found}</div>
         </div>

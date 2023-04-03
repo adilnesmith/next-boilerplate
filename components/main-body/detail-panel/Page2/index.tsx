@@ -5,19 +5,19 @@ import { useAuth } from "lib/context/AuthContext";
 const Page2: FC<Page2Props> = () => {
     const { user, login, logout } = useAuth();
     return (
-      <>
-       <div>
-            <main>
-                <div>
-                    <h2>User: {user ? "login" : "logout"}</h2>
+        <>
+            <div data-testid="page2">
+                <main>
                     <div>
-                        <button onClick={login}>Login</button>
-                        <button onClick={logout}>Logout</button>
+                        <h2>User: {user ? "login" : "logout"}</h2>
+                        <div>
+                            <button onClick={login}>Login</button>
+                            <button onClick={logout}>Logout</button>
+                        </div>
                     </div>
-                </div>
-            </main>
-        </div>
-      </>
+                </main>
+            </div>
+        </>
     )
 }
 export default Page2;
