@@ -5,7 +5,7 @@ import {
   decrement,
   increment,
   getCount,
-} from '../reducers/counter';
+} from 'pages/reducers/counter';
 
 export function Counter() {
   const count = useAppSelector(getCount);
