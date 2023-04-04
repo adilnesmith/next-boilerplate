@@ -9,7 +9,7 @@ const Page2: FC<Page2Props> = () => {
             <div data-testid="page2">
                 <main>
                     <div>
-                        <h2>User: {user ? "login" : "logout"}</h2>
+                        <h2 data-testid="heading">User: {user ? "login" : "logout"}</h2>
                         <div>
                             <button onClick={login}>Login</button>
                             <button onClick={logout}>Logout</button>
