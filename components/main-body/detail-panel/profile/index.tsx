@@ -19,7 +19,7 @@ function Profile() {
                 router.push(`/category`);
             }}>Profile Panel</div>
             <div>
-                {items.map((item, i) => (
+                {items?.map((item, i) => (
                     <div key={i}>
                         <p>{item.API}</p>
                     </div>

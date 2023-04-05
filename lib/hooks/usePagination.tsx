@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { ENDPOINTS } from 'lib/api'
 import { API_DOMAIN } from 'lib/general-config'
-import { PaginationData, Post } from 'lib/@types/common';
+import { PaginationData, Item } from 'lib/@types/common';
 
 function usePagination(itemNumber: number = 5): PaginationData {
-    const [items, setItems] = useState<Post[]>([]);
+    const [items, setItems] = useState<Item[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
     const [pageNumber, setPageNumber] = useState<number>(1);
@@ -35,7 +35,7 @@ function usePagination(itemNumber: number = 5): PaginationData {
             });
     }, []);
 
-    const totalItems = items.length;
+    const totalItems = items?.length;
     const totalPages = Math.ceil(totalItems / itemNumber);
     const currentPage = Math.min(pageNumber, totalPages);
 

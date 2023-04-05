@@ -39,14 +39,14 @@ export interface UseAxiosState<T> {
     error: Error | null;
     isLoading: boolean;
 }
-export interface Post {
+export interface Item {
     id: number;
     title: string;
     content: string;
 }
 
 export interface PaginationData {
-    items: Post[];
+    items: Item[];
     loading: boolean;
     error: string | null;
     handlePrev: () => void;
